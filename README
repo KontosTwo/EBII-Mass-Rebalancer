@@ -1,0 +1,18 @@
+A mass rebalancer to solve the problem of standardizing infantry mass.
+
+To run, type "java -jar <JAR_NAME> <ABSOLUTE_INPUT_PATH> <ABSOLUTE_OUTPUT_PATH>"
+For example, "java -jar massrebalancer.jar /Users/export_descr_unit.txt /Users/export_descr_unit_balanced.txt
+
+This application is written in a way that uses Java Enums to facilitate the
+command pattern (https://www.baeldung.com/java-command-pattern), where each member
+of each enum encapsulates all the data needed to run the mass rebalancer.
+To add new behavior, simply add a new enum member to the Java Enum. The following
+files follow this pattern:
+
+ - UnitAttributeMapper.java: converts edu data to a format understandable to this program
+ - UnitAttribute.java: defines each edu attribute and its program-understandable equivalent
+ - BalancerDefinition.java: calculates edu mass based on the created Unit.java object
+
+Open the file to view its associated in-depth guide
+
+Originally developed by Shoebopp
